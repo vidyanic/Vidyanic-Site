@@ -7,15 +7,15 @@ subtitle: "A Unified Framework for Understanding Reality across all Knowledge Fi
 description: "Complete knowledge base documenting Universal Principles, anomalies explained, and a unified framework for universal sense-making across all knowledge fields."
 author: "Ranjeet"
 email: ""
-baseurl: "/bramhagyan-site" # GitHub Pages repository name
-url: "https://ranjeet-sunya.github.io" # Production URL
+baseurl: "" # Empty for root domain deployment
+url: "https://vidyanic.com" # Production URL
 
 # Source directory - root folder contains all content
 source: .
 
 # Repository
-repository: "ranjeet-sunya/bramhagyan-site"
-github_username: "ranjeet-sunya"
+repository: "vidyanic/Vidyanic-Site"
+github_username: "vidyanic"
 
 # Build settings
 encoding: utf-8
@@ -117,7 +117,7 @@ logo: /assets/images/shunya-logo.png
 social:
   name: Vidyanic Project
   links:
-    - https://ranjeet-sunya.github.io/bramhagyan-site
+    - https://vidyanic.com
 
 # License
 license: CC BY-NC 4.0 (Non-Commercial)
