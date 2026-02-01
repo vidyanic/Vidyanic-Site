@@ -24,8 +24,5 @@ vendor/
 .DS_Store
 Thumbs.db
 
-# Local config
-_config_local.yml
-
 # Logs
 *.log
