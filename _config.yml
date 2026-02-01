@@ -1,0 +1,139 @@
+# GitHub Pages Configuration for Vidyanic Public Site
+# This is the PUBLIC REPO - Contains only user-facing content
+
+# Site settings
+title: "Vidyanic"
+subtitle: "A Unified Framework for Understanding Reality across all Knowledge Fields"
+description: "Complete knowledge base documenting Universal Principles, anomalies explained, and a unified framework for universal sense-making across all knowledge fields."
+author: "Ranjeet"
+email: ""
+baseurl: "/bramhagyan-site" # GitHub Pages repository name
+url: "https://ranjeet-sunya.github.io" # Production URL
+
+# Source directory - root folder contains all content
+source: .
+
+# Repository
+repository: "ranjeet-sunya/bramhagyan-site"
+github_username: "ranjeet-sunya"
+
+# Build settings
+encoding: utf-8
+
+# Theme settings
+show_downloads: false
+
+# Markdown processing
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: java
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  parse_block_html: true
+
+# Plugins
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Relative links - Convert .md to automatically
+relative_links:
+  enabled: true
+  collections: true
+
+# Permalink style
+permalink: /:path:output_ext
+
+# Optional front matter
+optional_front_matter:
+  remove_originals: false
+
+# README index
+readme_index:
+  enabled: true
+  remove_originals: false
+  with_frontmatter: false
+
+# Include/Exclude files
+include:
+  - README.md
+  - _config.yml
+  - .gitattributes
+  - assets
+  - site
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .gitignore
+  - "*.gem"
+  - "*.gemspec"
+  - .git
+  - .github
+  - serve.sh
+  - DEVELOPMENT.md
+  - _config_local.yml
+  - docker-compose.yml
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Vidyanic Project"
+      encoding: "utf-8"
+      show_downloads: false
+      description: "Vidyanic - A Unified Framework for Understanding Reality"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      toc: true
+      encoding: "utf-8"
+      show_downloads: false
+      description: "Vidyanic - Knowledge Base"
+
+sass:
+  style: compressed
+  
+# SEO
+lang: en_US
+logo: /assets/images/shunya-logo.png
+
+# Social
+social:
+  name: Vidyanic Project
+  links:
+    - https://ranjeet-sunya.github.io/bramhagyan-site
+
+# License
+license: CC BY-NC 4.0 (Non-Commercial)
+license_url: https://creativecommons.org/licenses/by-nc/4.0/
+
+# Publishing date
+date: 2026-02-01
+
+# Additional metadata
+keywords: 
+  - Vedic Science
+  - Universal Principles
+  - Fractal Physics
+  - Consciousness
+  - Quantum Mechanics
+  - Open Source Knowledge
+
+# Custom variables
+vedic_date: "Vikram Samvat 2082"

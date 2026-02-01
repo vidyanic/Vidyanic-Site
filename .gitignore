@@ -1,0 +1,31 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencies
+node_modules/
+vendor/
+.bundle/
+
+# Build artifacts
+*.gem
+*.gemspec
+.sass-cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local config
+_config_local.yml
+
+# Logs
+*.log

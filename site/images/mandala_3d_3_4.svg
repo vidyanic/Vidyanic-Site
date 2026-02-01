@@ -1,0 +1,80 @@
+<svg width="800" height="800" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cube_top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a" />
+      <stop offset="100%" stop-color="#1a1a1a" />
+    </linearGradient>
+    <linearGradient id="gold_3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#B38728" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+    <linearGradient id="silver_3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFEFEF" />
+      <stop offset="50%" stop-color="#999999" />
+      <stop offset="100%" stop-color="#555555" />
+    </linearGradient>
+
+    <!-- 3, 4, 7, 11... Sequence Spirals -->
+    <path id="spiral_cw" d="M 0,0 
+             A 30,30 0 0,1 30,-30
+             A 40,40 0 0,1 70,10
+             A 70,70 0 0,1 0,80
+             A 110,110 0 0,1 -110,-30
+             A 180,180 0 0,1 70,-210
+             A 290,290 0 0,1 360,80
+             A 470,470 0 0,1 -110,550" 
+          fill="none" stroke-width="12" stroke-linecap="round" />
+    
+    <path id="spiral_acw" d="M 0,0 
+             A 30,30 0 0,0 -30,-30
+             A 40,40 0 0,0 -70,10
+             A 70,70 0 0,0 0,80
+             A 110,110 0 0,0 110,-30
+             A 180,180 0 0,0 -70,-210
+             A 290,290 0 0,0 -360,80
+             A 470,470 0 0,0 110,550" 
+          fill="none" stroke-width="12" stroke-linecap="round" />
+  </defs>
+
+  <rect width="1000" height="1000" fill="#050505" />
+
+  <g transform="translate(500, 350) scale(1, 0.6) rotate(45)">
+    <rect x="-450" y="-450" width="900" height="900" fill="url(#cube_top)" stroke="#444" stroke-width="2" />
+    
+    <!-- Grid Lines -->
+    <g stroke="#333" stroke-width="1" stroke-opacity="0.5">
+      <line x1="-350" y1="-450" x2="-350" y2="450" /><line x1="-250" y1="-450" x2="-250" y2="450" />
+      <line x1="-150" y1="-450" x2="-150" y2="450" /><line x1="-50" y1="-450" x2="-50" y2="450" />
+      <line x1="50" y1="-450" x2="50" y2="450" /><line x1="150" y1="-450" x2="150" y2="450" />
+      <line x1="250" y1="-450" x2="250" y2="450" /><line x1="350" y1="-450" x2="350" y2="450" />
+      <line x1="-450" y1="-350" x2="450" y2="-350" /><line x1="-450" y1="-250" x2="450" y2="-250" />
+      <line x1="-450" y1="-150" x2="450" y2="-150" /><line x1="-450" y1="-50" x2="450" y2="-50" />
+      <line x1="-450" y1="50" x2="450" y2="50" /><line x1="-450" y1="150" x2="450" y2="150" />
+      <line x1="-450" y1="250" x2="450" y2="250" /><line x1="-450" y1="350" x2="450" y2="350" />
+    </g>
+
+    <!-- Brahma Pada -->
+    <rect x="-150" y="-150" width="300" height="300" fill="#FFD700" fill-opacity="0.08" stroke="#AA771C" stroke-width="3" />
+
+    <!-- 4 Directions -->
+    <g>
+      <!-- Shadows -->
+      <g opacity="0.3" filter="blur(5px)" transform="translate(18, 18)">
+        <use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" />
+        <g transform="rotate(90)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+        <g transform="rotate(180)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+        <g transform="rotate(270)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+      </g>
+
+      <!-- Floating Spirals -->
+      <g>
+        <use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" />
+        <g transform="rotate(90)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+        <g transform="rotate(180)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+        <g transform="rotate(270)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+      </g>
+    </g>
+  </g>
+  <text x="500" y="950" fill="#666" font-family="Arial" font-size="20" text-anchor="middle">3-4-7-11 Sequence 3D Visualization</text>
+</svg>

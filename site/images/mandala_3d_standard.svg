@@ -1,0 +1,136 @@
+<svg width="800" height="800" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Lighting and Shading -->
+    <linearGradient id="cube_top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a" />
+      <stop offset="100%" stop-color="#1a1a1a" />
+    </linearGradient>
+    <linearGradient id="cube_side_left" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151515" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <linearGradient id="cube_side_right" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#202020" />
+      <stop offset="100%" stop-color="#101010" />
+    </linearGradient>
+
+    <!-- Gold Spiral 3D -->
+    <linearGradient id="gold_3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#B38728" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+
+    <!-- Silver Spiral 3D -->
+    <linearGradient id="silver_3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFEFEF" />
+      <stop offset="50%" stop-color="#999999" />
+      <stop offset="100%" stop-color="#555555" />
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dx="10" dy="10" result="offsetblur" />
+      <feFlood flood-color="black" flood-opacity="0.8" />
+      <feComposite in2="offsetblur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="#050505" />
+
+  <!-- 3D Projected Content -->
+  <!-- We use a skew and rotate transform to simulate a tilted perspective floor -->
+  <g transform="translate(500, 350) scale(1, 0.6) rotate(45)">
+    
+    <!-- Shadow for the Spirals on the floor -->
+    <g opacity="0.4" filter="blur(8px)" transform="translate(20, 20)">
+       <!-- (Spirals will be drawn here too for shadow) -->
+    </g>
+
+    <!-- 81 Grid (Cubes) -->
+    <!-- Drawing a thick floor plate with grid lines to look like interconnected cubes -->
+    <g stroke="#333" stroke-width="2">
+      <!-- Base Slab -->
+      <rect x="-450" y="-450" width="900" height="900" fill="url(#cube_top)" stroke="#444" />
+      
+      <!-- Grid Lines on Top -->
+      <g stroke-opacity="0.5">
+        <line x1="-350" y1="-450" x2="-350" y2="450" /><line x1="-250" y1="-450" x2="-250" y2="450" />
+        <line x1="-150" y1="-450" x2="-150" y2="450" /><line x1="-50" y1="-450" x2="-50" y2="450" />
+        <line x1="50" y1="-450" x2="50" y2="450" /><line x1="150" y1="-450" x2="150" y2="450" />
+        <line x1="250" y1="-450" x2="250" y2="450" /><line x1="350" y1="-450" x2="350" y2="450" />
+
+        <line x1="-450" y1="-350" x2="450" y2="-350" /><line x1="-450" y1="-250" x2="450" y2="-250" />
+        <line x1="-450" y1="-150" x2="450" y2="-150" /><line x1="-450" y1="-50" x2="450" y2="-50" />
+        <line x1="-450" y1="50" x2="450" y2="50" /><line x1="-450" y1="150" x2="450" y2="150" />
+        <line x1="-450" y1="250" x2="450" y2="250" /><line x1="-450" y1="350" x2="450" y2="350" />
+      </g>
+
+      <!-- Brahma Pada Highlight -->
+      <rect x="-150" y="-150" width="300" height="300" fill="#FFD700" fill-opacity="0.08" stroke="#AA771C" stroke-width="3" />
+    </g>
+
+    <!-- Spirals (Standard Fibonacci) -->
+    <!-- We draw them twice: once on the floor as shadow, once floating with Z-depth -->
+    <g id="spirals_group">
+      <!-- Path Definition for re-use -->
+      <defs>
+        <path id="spiral_cw" d="M 0,0 
+                 A 10,10 0 0,1 10,-10
+                 A 10,10 0 0,1 20,0
+                 A 20,20 0 0,1 0,20
+                 A 30,30 0 0,1 -30,-10
+                 A 50,50 0 0,1 20,-60
+                 A 80,80 0 0,1 100,20
+                 A 130,130 0 0,1 -30,150
+                 A 210,210 0 0,1 -240,-60
+                 A 340,340 0 0,1 100,-400" 
+              fill="none" stroke-width="12" stroke-linecap="round" />
+        
+        <path id="spiral_acw" d="M 0,0 
+                 A 10,10 0 0,0 -10,-10
+                 A 10,10 0 0,0 -20,0
+                 A 20,20 0 0,0 0,20
+                 A 30,30 0 0,0 30,-10
+                 A 50,50 0 0,0 -20,-60
+                 A 80,80 0 0,0 -100,20
+                 A 130,130 0 0,0 30,150
+                 A 210,210 0 0,0 240,-60
+                 A 340,340 0 0,0 -100,-400" 
+              fill="none" stroke-width="12" stroke-linecap="round" />
+      </defs>
+
+      <!-- 4 Directions -->
+      <g transform="translate(0, 0)">
+        <!-- Shadows (on the floor) -->
+        <g opacity="0.3" filter="blur(4px)" transform="translate(15, 15)">
+          <use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" />
+          <g transform="rotate(90)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+          <g transform="rotate(180)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+          <g transform="rotate(270)"><use href="#spiral_cw" stroke="#000" /><use href="#spiral_acw" stroke="#000" /></g>
+        </g>
+
+        <!-- Floating Spirals with Highlight Stroke -->
+        <g>
+          <use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" />
+          <g transform="rotate(90)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+          <g transform="rotate(180)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+          <g transform="rotate(270)"><use href="#spiral_cw" stroke="url(#gold_3d)" /><use href="#spiral_acw" stroke="url(#silver_3d)" /></g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Side Walls of the Slab for 3D Depth -->
+  <g transform="translate(500, 350)">
+     <!-- Front Right Side -->
+     <path d="M 318,318 L 318,348 L -318,348 L -318,318 Z" fill="url(#cube_side_left)" transform="rotate(0)" />
+     <!-- This part is tricky manually, but I'll add simple depth bars -->
+  </g>
+  
+  <text x="500" y="950" fill="#666" font-family="Arial" font-size="20" text-anchor="middle">Standard Fibonacci 3D Exploration</text>
+</svg>
