@@ -7,9 +7,9 @@
       <stop offset="15%" stop-color="#FF8C00" />  <!-- Radiant Orange -->
       <stop offset="30%" stop-color="#FFB907" />  <!-- Warm Yellowish Gold -->
       <stop offset="55%" stop-color="#FFC800" />  <!-- Deep Divine Gold -->
-      <stop offset="70%" stop-color="#FFD700" />  <!-- Sunlit Peak Gold -->
+      <stop offset="70%" stop-color="#FFC800" />  <!-- Sunlit Peak Gold -->
       <stop offset="95%" stop-color="#FFD700" />  <!-- Peak Highlighting -->
-      <stop offset="100%" stop-color="#FADB43" /> <!-- Transformation Yellow (Akasha-Tip) -->
+      <stop offset="100%" stop-color="#FFD700" /> <!-- Transformation Yellow (Akasha-Tip) -->
     </radialGradient>
 
     <!-- 2. Silver AntiClockwise Swastik (Contraction / Chitta / Shadow) -->
@@ -36,7 +36,7 @@
       </feMerge>
     </filter>
 
-    <!-- 4. Bindu Vortex (The Singularity / Big Bang Origin) -->
+    <!-- 4. Bindu Vortex (The Singularity) -->
     <radialGradient id="bindu_vortex" cx="0" cy="0" r="42" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#000000" />   <!-- Null Point (Sunya) -->
       <stop offset="10%" stop-color="#0A0000" />  <!-- Gravitational Shadow Red -->
@@ -64,7 +64,7 @@
   <g transform="translate(256, 256) scale(0.78)">
     
     <!-- Recessive Field (Silver Swastik / Back of Torus) -->
-    <g id="silver_swastik_receding" stroke-width="72" stroke-linecap="round" fill="none" stroke="url(#silver_swastik_grad)">
+    <g id="silver_swastik_receding" stroke-width="82" stroke-linecap="round" fill="none" stroke="url(#silver_swastik_grad)">
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" transform="scale(1, -1)" />
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" transform="scale(1, -1) rotate(180)" />
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" transform="scale(1, -1) rotate(90)" />
@@ -72,7 +72,7 @@
     </g>
 
     <!-- Manifest Field (Golden Swastik Torus / Front of Torus) -->
-    <g id="golden_swastik_emerging" stroke-width="72" stroke-linecap="round" fill="none" stroke="url(#golden_swastik_torus_grad)" filter="url(#dimensional_depth_filter)">
+    <g id="golden_swastik_emerging" stroke-width="82" stroke-linecap="round" fill="none" stroke="url(#golden_swastik_torus_grad)" filter="url(#dimensional_depth_filter)">
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" />
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" transform="rotate(180)" />
       <path d="M 0 0 C 40 -10, 80 -100, 160 -100 C 230 -100, 260 -50, 260 0" transform="rotate(90)" />
