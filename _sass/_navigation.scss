@@ -23,19 +23,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-      radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.5), transparent),
-      radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.4), transparent),
-      radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.3), transparent),
-      radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.5), transparent),
-      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.4), transparent),
-      radial-gradient(1.5px 1.5px at 160px 120px, rgba(255,255,255,0.6), transparent),
-      radial-gradient(1px 1px at 200px 30px, rgba(255,255,255,0.4), transparent),
-      radial-gradient(1px 1px at 250px 90px, rgba(255,255,255,0.3), transparent),
-      radial-gradient(1.5px 1.5px at 300px 50px, rgba(255,255,255,0.5), transparent),
-      radial-gradient(1px 1px at 350px 120px, rgba(255,255,255,0.4), transparent),
-      radial-gradient(1px 1px at 400px 60px, rgba(255,255,255,0.5), transparent),
-      radial-gradient(1px 1px at 450px 100px, rgba(255,255,255,0.3), transparent);
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1.5px 1.5px at 160px 120px, rgba(255, 255, 255, 0.6), transparent),
+      radial-gradient(1px 1px at 200px 30px, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 250px 90px, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(1.5px 1.5px at 300px 50px, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 350px 120px, rgba(255, 255, 255, 0.4), transparent),
+      radial-gradient(1px 1px at 400px 60px, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 450px 100px, rgba(255, 255, 255, 0.3), transparent);
     pointer-events: none;
     z-index: 0;
   }
@@ -68,7 +68,6 @@
   display: block;
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
 }
 
 .brand-text {
@@ -110,7 +109,7 @@
       opacity: 1;
     }
   }
-  
+
   &:active {
     background: rgba(33, 150, 243, 0.3);
   }
@@ -134,7 +133,7 @@
   box-shadow: var(--shadow-lg), 0 0 20px rgba(33, 150, 243, 0.4);
   z-index: 999;
   transition: all var(--transition-normal);
-  
+
   &:hover {
     transform: scale(1.1);
     box-shadow: var(--shadow-xl), 0 0 30px rgba(33, 150, 243, 0.5);
